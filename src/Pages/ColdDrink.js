@@ -58,7 +58,7 @@ const ColdDrink = () => {
                   </Link>
                   <Link
                     className="btn btn-outline-primary btn-sm"
-                    to="#"
+                    to="https://www.toasttab.com/homekitchen/v3#db2b9c696-da84-4f10-ad7f-a93edae53f86d393a567b-ee1d-4203-bf3c-bec135a6dd8f"
                     data-abc="true"
                   >
                     Viwe Product
@@ -95,7 +95,7 @@ const ColdDrink = () => {
                   </Link>
                   <Link
                     className="btn btn-outline-primary btn-sm"
-                    to="#"
+                    to="https://www.toasttab.com/homekitchen/v3/add/ec0da94b-4ca3-4576-acc5-8349de4f6293/393a567b-ee1d-4203-bf3c-bec135a6dd8f"
                     data-abc="true"
                   >
                     Viwe Product
@@ -105,6 +105,43 @@ const ColdDrink = () => {
             </div>
           </div>
           <div className="col-lg-4 col-md-6 col-sm-6">
+            <div className="card mb-30">
+              <div className='addtocart-btn'>
+                <Link className="card-img-tiles" to="https://www.toasttab.com/homekitchen/v3#db2b9c696-da84-4f10-ad7f-a93edae53f86d393a567b-ee1d-4203-bf3c-bec135a6dd8f" data-abc="true">
+                  <div className="inner">
+                    <div className="main-img">
+                      <img src={strawberry3} alt="Category" />
+                    </div>
+                    <div className="thumblist">
+                      <img src={strawberry2} alt="Category" />
+                      <img src={strawberry1} alt="Category" />
+                    </div>
+                  </div>
+                </Link>
+              </div>
+              <div className="card-body text-center">
+                <h4 className="card-title">strawbery Milkshak</h4>
+                <p className="text-muted">Starting from $3</p>
+                <div className='addtocart-btn'>
+                  <Link
+                    className="btn btn-outline-primary btn-sm"
+                    to="https://www.toasttab.com/homekitchen/v3#db2b9c696-da84-4f10-ad7f-a93edae53f86d393a567b-ee1d-4203-bf3c-bec135a6dd8f"
+                    data-abc="true"
+                  >
+                    Add to Cart
+                  </Link>
+                  <Link
+                    className="btn btn-outline-primary btn-sm"
+                    to="https://www.toasttab.com/homekitchen/v3#db2b9c696-da84-4f10-ad7f-a93edae53f86d393a567b-ee1d-4203-bf3c-bec135a6dd8f"
+                    data-abc="true"
+                  >
+                    Viwe Product
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* <div className="col-lg-4 col-md-6 col-sm-6">
             <div className="card mb-30">
               <Link className="card-img-tiles" to="https://www.toasttab.com/homekitchen/v3#db2b9c696-da84-4f10-ad7f-a93edae53f86d393a567b-ee1d-4203-bf3c-bec135a6dd8f" data-abc="true">
                 <div className="inner">
@@ -140,7 +177,7 @@ const ColdDrink = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
           <div className="col-lg-4 col-md-6 col-sm-6">
             <div className="card mb-30">
               <Link className="card-img-tiles" to="https://www.toasttab.com/homekitchen/v3/add/c5acc4d1-a86e-4c91-9e06-4cc109e3a13d/393a567b-ee1d-4203-bf3c-bec135a6dd8f" data-abc="true">
@@ -167,7 +204,7 @@ const ColdDrink = () => {
                   </Link>
                   <Link
                     className="btn btn-outline-primary btn-sm"
-                    to="#"
+                    to="https://www.toasttab.com/homekitchen/v3/add/c5acc4d1-a86e-4c91-9e06-4cc109e3a13d/393a567b-ee1d-4203-bf3c-bec135a6dd8f"
                     data-abc="true"
                   >
                     Viwe Product
@@ -202,7 +239,7 @@ const ColdDrink = () => {
                   </Link>
                   <Link
                     className="btn btn-outline-primary btn-sm"
-                    to="#"
+                    to="https://www.toasttab.com/homekitchen/v3/add/ebe58e05-cfcd-4767-9b2a-ccaf169b39e0/393a567b-ee1d-4203-bf3c-bec135a6dd8f"
                     data-abc="true"
                   >
                     Viwe Product

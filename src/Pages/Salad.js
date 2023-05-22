@@ -45,7 +45,7 @@ const Salad = () => {
                   </Link>
                   <Link
                     className="btn btn-outline-primary btn-sm"
-                    to="#"
+                    to="https://www.toasttab.com/homekitchen/v3#d79517f6e-e11b-42fd-94bd-3f9be16c9254d3a6d4a63-4eeb-4cd0-ab9c-849f9ad3ee71"
                     data-abc="true"
                   >
                     Viwe Product
@@ -82,7 +82,7 @@ const Salad = () => {
                   </Link>
                   <Link
                     className="btn btn-outline-primary btn-sm"
-                    to="#"
+                    to="https://www.toasttab.com/homekitchen/v3#d79517f6e-e11b-42fd-94bd-3f9be16c9254d3a6d4a63-4eeb-4cd0-ab9c-849f9ad3ee71"
                     data-abc="true"
                   >
                     Viwe Product

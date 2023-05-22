@@ -45,7 +45,7 @@ const KidManu = () => {
                   </Link>
                   <Link
                     className="btn btn-outline-primary btn-sm"
-                    to="#"
+                    to="https://www.toasttab.com/homekitchen/v3/add/77bba549-c0cf-4106-8ef0-90332f997dca/880a245f-97ff-420f-916f-9a7587001e8a"
                     data-abc="true"
                   >
                     Viwe Product
@@ -82,7 +82,7 @@ const KidManu = () => {
                   </Link>
                   <Link
                     className="btn btn-outline-primary btn-sm"
-                    to="#"
+                    to="https://www.toasttab.com/homekitchen/v3/add/692ed163-e20e-4400-8e2f-c3b36425682f/880a245f-97ff-420f-916f-9a7587001e8a"
                     data-abc="true"
                   >
                     Viwe Product

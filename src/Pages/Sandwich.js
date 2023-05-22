@@ -49,7 +49,7 @@ const Sandwich = () => {
         <div className='col-12'> 
 
           <div>
-            <button className='btn btn-primary' onClick={() => openModal('https://www.toasttab.com/homekitchen/v3')}>Open Website</button>
+            <a className='btn btn-primary' onClick={() => openModal('https://www.toasttab.com/homekitchen/v3')}>Open Website</a>
             {isModalOpen && (
               <Model1 onClose={closeModal} url={websiteUrl} />
             )}
@@ -80,16 +80,16 @@ const Sandwich = () => {
               <h4 className="card-title">Southern Damsel</h4>
               <p className="text-muted">Starting from $14</p>
               <div className='addtocart-btn'>
-                <Link
+                <button
                   className="btn btn-outline-warning btn-sm"
-                  to='https://www.toasttab.com/homekitchen/v3/add/a8ac1173-1ebc-4088-a627-6cb5141f2e7b/bd32b5a5-9723-49aa-bd03-3ef3ff4bde60'
+                  onClick={() => openModal('https://www.toasttab.com/homekitchen/v3')}
                   data-abc="true"
                 >
                   Add to Cart
-                </Link>
+                </button>
                 <Link
                   className="btn btn-outline-primary btn-sm"
-                  to='https://www.toasttab.com/homekitchen/v3'
+                  to='https://www.toasttab.com/homekitchen/v3/add/a8ac1173-1ebc-4088-a627-6cb5141f2e7b/bd32b5a5-9723-49aa-bd03-3ef3ff4bde60'
                   data-abc="true"
                 >
                   Viwe Product
@@ -126,7 +126,7 @@ const Sandwich = () => {
                 </Link>
                 <Link
                   className="btn btn-outline-primary btn-sm"
-                  to='https://www.toasttab.com/homekitchen/v3'
+                  to='https://www.toasttab.com/homekitchen/v3/add/8738621f-e97d-4db9-8a11-72b5a7991fc5/bd32b5a5-9723-49aa-bd03-3ef3ff4bde60'
                   data-abc="true"
                 >
                   Viwe Product
@@ -136,6 +136,43 @@ const Sandwich = () => {
           </div>
         </div>
         <div className="col-lg-4 col-md-6 col-sm-6">
+          <div className="card mb-30">
+            <div className='addtocart-btn'>
+              <Link className="card-img-tiles" to='https://www.toasttab.com/homekitchen/v3/add/eb8dd1d7-9f14-44b3-a7a5-c3e394fa6433/bd32b5a5-9723-49aa-bd03-3ef3ff4bde60' data-abc="true">
+                <div className="inner">
+                  <div className="main-img">
+                    <img src={sw7} alt="Category" />
+                  </div>
+                  <div className="thumblist">
+                    <img src={sw8} alt="Category" />
+                    <img src={sw9} alt="Category" />
+                  </div>
+                </div>
+              </Link>
+            </div>
+            <div className="card-body text-center">
+              <h4 className="card-title">Eastern shore</h4>
+              <p className="text-muted">Starting from $15</p>
+              <div className='addtocart-btn'>
+                <Link
+                  className="btn btn-outline-primary btn-sm"
+                  to='https://www.toasttab.com/homekitchen/v3/add/eb8dd1d7-9f14-44b3-a7a5-c3e394fa6433/bd32b5a5-9723-49aa-bd03-3ef3ff4bde60'
+                  data-abc="true"
+                >
+                  Add to Cart
+                </Link>
+                <Link
+                  className="btn btn-outline-primary btn-sm"
+                  to='https://www.toasttab.com/homekitchen/v3/add/eb8dd1d7-9f14-44b3-a7a5-c3e394fa6433/bd32b5a5-9723-49aa-bd03-3ef3ff4bde60'
+                  data-abc="true"
+                >
+                  Viwe Product
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* <div className="col-lg-4 col-md-6 col-sm-6">
           <div className="card mb-30">
             <Link className="card-img-tiles" to='https://www.toasttab.com/homekitchen/v3/add/eb8dd1d7-9f14-44b3-a7a5-c3e394fa6433/bd32b5a5-9723-49aa-bd03-3ef3ff4bde60' data-abc="true">
               <div className="inner">
@@ -162,7 +199,7 @@ const Sandwich = () => {
                 </Link>
                 <Link
                   className="btn btn-outline-primary btn-sm"
-                  to='https://www.toasttab.com/homekitchen/v3'
+                  to='https://www.toasttab.com/homekitchen/v3/add/eb8dd1d7-9f14-44b3-a7a5-c3e394fa6433/bd32b5a5-9723-49aa-bd03-3ef3ff4bde60'
                   data-abc="true"
                 >
                   Viwe product
@@ -171,7 +208,7 @@ const Sandwich = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
         <div className="col-lg-4 col-md-6 col-sm-6">
           <div className="card mb-30">
             <Link className="card-img-tiles" to='https://www.toasttab.com/homekitchen/v3/add/794add2d-41e3-403b-8bc5-5aa959f278cc/bd32b5a5-9723-49aa-bd03-3ef3ff4bde60' data-abc="true">
@@ -198,7 +235,7 @@ const Sandwich = () => {
                 </Link>
                 <Link
                   className="btn btn-outline-primary btn-sm"
-                  to='https://www.toasttab.com/homekitchen/v3'
+                  to='https://www.toasttab.com/homekitchen/v3/add/794add2d-41e3-403b-8bc5-5aa959f278cc/bd32b5a5-9723-49aa-bd03-3ef3ff4bde60'
                   data-abc="true"
                 >
                   Viwe Product
@@ -209,7 +246,7 @@ const Sandwich = () => {
         </div>
         <div className="col-lg-4 col-md-6 col-sm-6">
           <div className="card mb-30">
-            <Link className="card-img-tiles" to='https://www.toasttab.com/homekitchen/v3/add/7bab4a44-ee8b-4400-9342-39ee6754f75f/bd32b5a5-9723-49aa-bd03-3ef3ff4bde60' data-abc="true">
+            <a className="card-img-tiles" to='https://www.toasttab.com/homekitchen/v3/add/7bab4a44-ee8b-4400-9342-39ee6754f75f/bd32b5a5-9723-49aa-bd03-3ef3ff4bde60' data-abc="true">
               <div className="inner">
                 <div className="main-img">
                   <img src={sw5} alt="Category" />
@@ -219,7 +256,7 @@ const Sandwich = () => {
                   <img src={sw8} alt="Category" />
                 </div>
               </div>
-            </Link>
+            </a>
             <div className="card-body text-center">
               <h4 className="card-title">The Tandoori</h4>
               <p className="text-muted">Starting from $14</p>

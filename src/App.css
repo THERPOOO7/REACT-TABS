@@ -375,6 +375,12 @@ a {
     }
 }
 
+@media only screen and (max-width : 400px) {
+  .btn{
+    width: 100px;
+  }
+}
+
 /* mediaquary for tab scroll in sm device */
 
 
@@ -393,4 +399,19 @@ a {
   .tabs button {
     width: 120px !important;
   }
+}
+
+@media only screen and (max-width:576px) and (min-width:440px){
+  .addtocart-btn button {
+            width: 160px;
+            line-height: 35px;
+  }
+  
+}
+
+
+@media only screen and (max-width:992px) {
+  #basic-navbar-nav{
+    background-color: cadetblue;
+    z-index: 1;  }
 }

@@ -50,7 +50,7 @@ const Sides = () => {
               </Link>
               <Link
                 className="btn btn-outline-primary btn-sm"
-                to=""
+                to="https://www.toasttab.com/homekitchen/v3/add/14c02f3d-eaa0-4df1-910d-de1c1540783d/5add974f-9506-4f0f-ac2f-4d21846dafc2"
                 data-abc="true"
               >
                 Viwe Product
@@ -98,6 +98,43 @@ const Sides = () => {
         </div>
         <div className="col-lg-4 col-md-6 col-sm-6">
           <div className="card mb-30">
+            <div className='addtocart-btn'>
+            <Link className="card-img-tiles" to="https://www.toasttab.com/homekitchen/v3/add/f3835752-2a1d-4c67-9725-ead6fab62097/5add974f-9506-4f0f-ac2f-4d21846dafc2" data-abc="true">
+              <div className="inner">
+                <div className="main-img">
+                  <img src={spuds1} alt="Category" />
+                </div>
+                <div className="thumblist">
+                  <img src={spuds2} alt="Category" />
+                  <img src={spuds3} alt="Category" />
+                </div>
+              </div>
+            </Link>
+            </div>
+            <div className="card-body text-center">
+              <h4 className="card-title">LOADED SPUDS</h4>
+              <p className="text-muted">Starting from $8.99</p>
+              <div className='addtocart-btn'>
+              <Link
+                className="btn btn-outline-primary btn-sm"
+                to="https://www.toasttab.com/homekitchen/v3/add/f3835752-2a1d-4c67-9725-ead6fab62097/5add974f-9506-4f0f-ac2f-4d21846dafc2"
+                data-abc="true"
+              >
+                Add to Cart
+              </Link>
+              <Link
+                className="btn btn-outline-primary btn-sm"
+                to="https://www.toasttab.com/homekitchen/v3/add/f3835752-2a1d-4c67-9725-ead6fab62097/5add974f-9506-4f0f-ac2f-4d21846dafc2"
+                data-abc="true"
+              >
+                Viwe Product
+              </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* <div className="col-lg-4 col-md-6 col-sm-6">
+          <div className="card mb-30">
             <Link className="card-img-tiles" to="" data-abc="true">
               <div className="inner">
                 <div className="main-img">
@@ -132,7 +169,7 @@ const Sides = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
         <div className="col-lg-4 col-md-6 col-sm-6">
           <div className="card mb-30">
             <Link className="card-img-tiles" to="https://www.toasttab.com/homekitchen/v3/add/f55b215c-ae52-43b8-8231-e919d90c2534/5add974f-9506-4f0f-ac2f-4d21846dafc2" data-abc="true">
@@ -150,7 +187,7 @@ const Sides = () => {
               <h4 className="card-title">Chips</h4>
               <p className="text-muted">Starting from $4.5</p>
               <div className='addtocart-btn'>
-              <Link
+              <Link 
                 className="btn btn-outline-primary btn-sm"
                 to="https://www.toasttab.com/homekitchen/v3/add/f55b215c-ae52-43b8-8231-e919d90c2534/5add974f-9506-4f0f-ac2f-4d21846dafc2"
                 data-abc="true"
@@ -159,7 +196,7 @@ const Sides = () => {
               </Link>
               <Link
                 className="btn btn-outline-primary btn-sm"
-                to=""
+                to="https://www.toasttab.com/homekitchen/v3/add/f55b215c-ae52-43b8-8231-e919d90c2534/5add974f-9506-4f0f-ac2f-4d21846dafc2"
                 data-abc="true"
               >
                 Viwe Product

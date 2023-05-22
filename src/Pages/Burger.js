@@ -78,13 +78,13 @@ const Burger = () => {
               >
                 Add to Cart
               </button>
-                <Link
+                <button
                   className="btn btn-outline-primary btn-sm"
                   to='https://www.toasttab.com/homekitchen/v3'
                   data-abc="true"
                 >
                   Viwe Product
-                </Link>
+                </button>
               </div>
               
             </div>
@@ -114,13 +114,13 @@ const Burger = () => {
               >
                 Add to Cart
               </button>
-                <Link
+                <button
                   className="btn btn-outline-primary btn-sm"
                   to='https://www.toasttab.com/homekitchen/v3'
                   data-abc="true"
                 >
                   Viwe Product
-                </Link>
+                </button>
               </div>
              
             </div>
@@ -150,13 +150,13 @@ const Burger = () => {
               >
                 Add to Cart
               </button>
-                <Link
+                <button
                   className="btn btn-outline-primary btn-sm"
                   to='https://www.toasttab.com/homekitchen/v3'
                   data-abc="true"
                 >
                   Viwe Product
-                </Link>
+                </button>
               </div>
           
             </div>
@@ -194,13 +194,7 @@ const Burger = () => {
                 Add to Cart
               </button>
               
-              {/* <a
-                className="btn btn-outline-primary btn-sm"
-                href="#"
-                data-abc="true"
-              >
-                Viwe Product
-              </Link> */}
+
               </div>
             </div>
           </div>
@@ -230,13 +224,13 @@ const Burger = () => {
                 Add to Cart
               </button>
            
-              <Link
+              <button
                 className="btn btn-outline-primary btn-sm"
                 href="#"
                 data-abc="true"
               >
                 Viwe Product
-              </Link>
+              </button>
               </div>
             </div>
           </div>
@@ -265,13 +259,13 @@ const Burger = () => {
               >
                 Add to Cart
               </button>
-                <Link
+                <button
                   className="btn btn-outline-primary btn-sm"
                   to='https://www.toasttab.com/homekitchen/v3'
                   data-abc="true"
                 >
                   Viwe Product
-                </Link>
+                </button>
               </div>
             </div>
           </div>
@@ -300,13 +294,13 @@ const Burger = () => {
               >
                 Add to Cart
               </button>
-                <Link
+                <button
                   className="btn btn-outline-primary btn-sm"
                   to='https://www.toasttab.com/homekitchen/v3'
                   data-abc="true"
                 >
                   Viwe Product
-                </Link>
+                </button>
               </div>
             </div>
           </div>
@@ -335,13 +329,13 @@ const Burger = () => {
               >
                 Add to Cart
               </button>
-                <Link
+                <button
                   className="btn btn-outline-primary btn-sm"
                   to='https://www.toasttab.com/homekitchen/v3'
                   data-abc="true"
                 >
                   Viwe Product
-                </Link>
+                </button>
               </div>
             </div>
           </div>
