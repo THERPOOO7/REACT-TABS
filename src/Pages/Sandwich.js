@@ -1,17 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import Card from 'react-bootstrap/Card';
-import ListGroup from 'react-bootstrap/ListGroup';
-
-// import sandwich1 from '../Images/sandwich1.png'
-// import sandwich2 from '../Images/sandwich2.jpg'
-// import sandwich3 from '../Images/sandwich3.jpg'
-// import sandwich4 from '../Images/sandwich4.jpg'
-// import sandwich5 from '../Images/sandwich5.png'
-// import sandwich6 from '../Images/sandwich6.png'
-// import sandwich7 from '../Images/sandwich7.jpg'
-// import sandwich8 from '../Images/sandwich8.jpg'
-// import sandwich9 from '../Images/sandwich9.jpg'
 
 import sw1 from '../Images/sw1.jpg'
 import sw2 from '../Images/sw2.jpg'
@@ -49,7 +37,7 @@ const Sandwich = () => {
         <div className='col-12'> 
 
           <div>
-            <a className='btn btn-primary' onClick={() => openModal('https://www.toasttab.com/homekitchen/v3')}>Open Website</a>
+            <a className='btn btn-primary' onClick={() => openModal('https://www.toasttab.com/homekitchen/v3')}>Open Website Here</a>
             {isModalOpen && (
               <Model1 onClose={closeModal} url={websiteUrl} />
             )}
@@ -171,44 +159,7 @@ const Sandwich = () => {
               </div>
             </div>
           </div>
-        </div>
-        {/* <div className="col-lg-4 col-md-6 col-sm-6">
-          <div className="card mb-30">
-            <Link className="card-img-tiles" to='https://www.toasttab.com/homekitchen/v3/add/eb8dd1d7-9f14-44b3-a7a5-c3e394fa6433/bd32b5a5-9723-49aa-bd03-3ef3ff4bde60' data-abc="true">
-              <div className="inner">
-                <div className="main-img">
-                  <img src={sw7} alt="Category" />
-                </div>
-                <div className="thumblist">
-                  <img src={sw8} alt="Category" />
-                  <img src={sw9} alt="Category" />
-                </div>
-              </div>
-            </Link>
-            <div className="card-body text-center">
-              <h4 className="card-title">Estern Shore</h4>
-              <p className="text-muted">Starting from $15</p>
-              <div className='addtocart-btn'>
-                <Link
-                  className="btn btn-outline-primary btn-sm"
-                  to='https://www.toasttab.com/homekitchen/v3/add/eb8dd1d7-9f14-44b3-a7a5-c3e394fa6433/bd32b5a5-9723-49aa-bd03-3ef3ff4bde60'
-                  data-abc="true"
-                >
-                  Add to Cart
-
-                </Link>
-                <Link
-                  className="btn btn-outline-primary btn-sm"
-                  to='https://www.toasttab.com/homekitchen/v3/add/eb8dd1d7-9f14-44b3-a7a5-c3e394fa6433/bd32b5a5-9723-49aa-bd03-3ef3ff4bde60'
-                  data-abc="true"
-                >
-                  Viwe product
-
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div> */}
+        </div>          
         <div className="col-lg-4 col-md-6 col-sm-6">
           <div className="card mb-30">
             <Link className="card-img-tiles" to='https://www.toasttab.com/homekitchen/v3/add/794add2d-41e3-403b-8bc5-5aa959f278cc/bd32b5a5-9723-49aa-bd03-3ef3ff4bde60' data-abc="true">

@@ -1,5 +1,4 @@
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
+
 import { useState } from 'react';
 
 function Contact() {
@@ -45,7 +44,7 @@ function Contact() {
       return;
     }
  
-    // Perform form submission logic
+    // Perform form submission  
     console.log({
       name,
       email,

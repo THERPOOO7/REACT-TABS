@@ -1,5 +1,5 @@
 
-import React from "react";
+import React,{useState} from "react";
 import { Link } from "react-router-dom";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 
@@ -11,11 +11,23 @@ import Sides from "../Pages/Sides";
 import KidManu from "../Pages/KidManu";
 import Salad from "../Pages/Salad";
 import ColdDrink from "../Pages/ColdDrink";
-
+import Model1 from "./Model1";
 
 
 const Home = () => {
-
+  
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [websiteUrl, setWebsiteUrl] = useState('');
+    
+    const openModal = (url) => {
+      setIsModalOpen(true);
+      setWebsiteUrl(url);
+    };
+    
+    const closeModal = () => {
+      setIsModalOpen(false);
+      setWebsiteUrl('');
+    };
   return (
     <div>
       <div className="container-fluid">
@@ -47,6 +59,14 @@ const Home = () => {
                   </TabList>
                 </div>
               </div>
+
+
+              {/* <div className="col-lg-10">
+                <a className='btn btn-primary' onClick={() => openModal('https://www.toasttab.com/homekitchen/v3')}>Open Website</a>
+                {isModalOpen && (
+                  <Model1 onClose={closeModal} url={websiteUrl} />
+                )}
+              </div> */}
 
               <div class="col-lg-10 col-md-10 col-sm-12 " style={{ marginTop: '-12px' }}>
                 <TabPanel className="catagory">
