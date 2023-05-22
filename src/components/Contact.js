@@ -1,50 +1,133 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { useState } from 'react';
 
 function Contact() {
+
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [people, setPeople] = useState('');
+  const [eventDate, setEventDate] = useState('');
+  const [eventTime, setEventTime] = useState('');
+  const [eventDescription, setEventDescription] = useState('');
+ 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+ 
+    // Perform form validation
+    if (name.trim() === "") {
+     alert("Name is required");
+      return;
+    }
+    if (email.trim() === "") {
+      alert("Email is required");
+      return;
+    }
+    if (phone.trim() === "") {
+      alert("Phone number is required");
+      return;
+    }
+    if (people.trim() === "") {
+      alert("Number of people is required");
+      return;
+    }
+    if (eventDate.trim() === "") {
+      alert("Event date is required");
+      return;
+    }
+    if (eventTime.trim() === "") {
+      alert("Event time is required");
+      return;
+    }
+    if (eventDescription.trim() === "") {
+      alert("Event description is required");
+      return;
+    }
+ 
+    // Perform form submission logic
+    console.log({
+      name,
+      email,
+      phone,
+      people,
+      eventDate,
+      eventTime,
+      eventDescription,
+    });
+ 
+    // Reset form fields
+    setName('');
+    setEmail('');
+    setPhone('');
+    setPeople('');
+    setEventDate('');
+    setEventTime('');
+    setEventDescription('');
+    
+  };
+
+
   return (
     <div >
       <h1 className='mt-5' style={{ textAlign: 'center' }}>CATERING ORDER</h1>
       <div className="container py-5">
 
         <div className="border rounded  p-4">
-          <form>
+          <form onSubmit={handleSubmit}>
             <div className='row' >
               <div className="col form_margin my-3 form-group" >
                 <label className='mb-1' htmlFor="name">Name *</label>
-                <input type="text" className="py-2  form-control" id="name" placeholder="Name*" required />
+                <input type="text" className="py-2  form-control" id="name" placeholder="Name*" 
+                value={name}
+                onChange={(e) => setName(e.target.value)}  />
+                  
+                
               </div>
               <div className="col my-3 form-group">
                 <label className='mb-1' htmlFor="email">Email *</label>
-                <input type="email" className="py-2 form-control" id="email" placeholder="Email*" required />
+                <input type="email" className="py-2 form-control" id="email" placeholder="Email*"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}  />
               </div>
             </div>
 
             <div className='row'>
               <div className="col form_margin form-group">
                 <label className='mb-1' htmlFor="phone">Phone Number *</label>
-                <input type="tel" className="py-2 form-control" id="phone" placeholder="Phone Number*" required />
+                <input type="tel" className="py-2 form-control" id="phone" placeholder="Phone Number*"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}  />
               </div>
               <div className="col  form-group">
                 <label className='mb-1' htmlFor="people">Number of People *</label>
-                <input type="number" className="py-2 form-control" id="people" placeholder="Number of People*" required />
+                <input type="number" className="py-2 form-control" id="people" placeholder="Number of People*"
+                value={people}
+                onChange={(e) => setPeople(e.target.value)}/>
               </div>
             </div>
 
             <div className='row'>
               <div className="col my-3 form_margin form-group">
                 <label className='mb-1' htmlFor="event-date">Event Date *</label>
-                <input type="date" className="py-2 form-control" id="event-date" placeholder="dd-mm-yyyy" required />
+                <input type="date" className="py-2 form-control" id="event-date" placeholder="dd-mm-yyyy" 
+                value={eventDate}
+                onChange={(e) => setEventDate(e.target.value)}/>
               </div>
               <div className="col my-3 form-group">
                 <label className='mb-1' htmlFor="event-time">Event Time *</label>
-                <input type="time" className="py-2 form-control" id="event-time" placeholder="--:-- --" required />
+                <input type="time" className="py-2 form-control" id="event-time" placeholder="--:-- --" 
+                 value={eventTime}
+                 onChange={(e) => setEventTime(e.target.value)}/>
               </div>
             </div>
 
             <div className="my-3 form-group">
               <label className='mb-1' htmlFor="event-description">Describe the Event *</label>
-              <textarea className="py-4 form-control" id="event-description" rows="3" placeholder="Describe the event" required></textarea>
+              <textarea className="py-4 form-control" id="event-description" rows="3" placeholder="Describe the event"
+              value={eventDescription}
+              onChange={(e) => setEventDescription(e.target.value)}
+               ></textarea>
             </div>
 
             <div className='container' >

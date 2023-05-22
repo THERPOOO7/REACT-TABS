@@ -13,7 +13,7 @@ function NavBar() {
       <Container>
         <Navbar.Brand as={Link} to={'/'} >
           <div className='logo'>
-            <img src={logo}>
+            <img src={logo} alt='logo'>
             </img>
           </div>
         </Navbar.Brand>

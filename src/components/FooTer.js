@@ -17,7 +17,7 @@ const FooTer = () => {
                                 href="https://homekitcheninc.com/"
                                 className="d-flex align-items-center  link-dark text-decoration-none"
                             >
-                                <img className='logosize' src={logo}></img>
+                                <img className='logosize' src={logo} alt='iogo'></img>
                             </a>
                         </div>
                         <div className="col-lg-3 col-md-3 col-sm-6">
