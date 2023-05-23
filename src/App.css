@@ -400,12 +400,6 @@ a {
 
 
 /*  ------------------------------- All media ------------------------------ */
-/* @media only screen and (max-width: 991px) and (min-width: 768px) {
-  .inner{
-    height: 150px;
-    width: 200px;
-  }
-} */
 
 
 @media only screen and (max-width: 767px) and (min-width: 576px) {
@@ -427,7 +421,7 @@ a {
   }
 }
 
-/* mediaquary for tab scroll in sm device */
+/*---------------------- mediaquary for tab scroll in sm device -------------------------*/
 
 
 @media (max-width: 768px) {
@@ -455,9 +449,21 @@ a {
   
 }
 
+/*-------------------------------- NAVBAR media ----------------------------------- */
+
 
 @media only screen and (max-width:992px) {
   #basic-navbar-nav{
     background-color: cadetblue;
     z-index: 1;  }
 }
+
+@media only screen and (max-width:992px) {
+  .items2{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+/* -------------------------------------------------------------------------------- */

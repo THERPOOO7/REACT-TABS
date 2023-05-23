@@ -9,8 +9,6 @@ import FooTer from './components/FooTer';
 import ProfileP from './components/ProfileP';
 
 
-
-
 function App() {
   return (
     <>
@@ -33,5 +31,7 @@ function App() {
 }
 
 export default App;
+
+
 
  

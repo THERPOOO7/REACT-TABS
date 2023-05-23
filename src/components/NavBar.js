@@ -7,6 +7,7 @@ import logo from '../Images/HFLOGO.png'
 import {FaUserCircle} from 'react-icons/fa'
 import {AiOutlineShoppingCart} from 'react-icons/ai'
 import Model1 from './Model1';
+import abc from '../'
 
 const NavBar = () => 
 
@@ -45,15 +46,15 @@ const closeModal = () => {
               <Nav.Link as={Link} to={'About'} className='item'>ORDER ONLINE</Nav.Link>
             </Nav>
           </Navbar.Collapse>
-          <Navbar.Collapse id="basic-navbar-nav" >
-
+          <Navbar.Collapse id="basic-navbar-nav" style={{justifyContent:'end'}} >
+            <div className='items2'>
+              <Nav.Link as={Link} to={'ProfileP'} className='item1'><FaUserCircle /></Nav.Link>
+              <button onClick={() => openModal('https://www.toasttab.com/homekitchen/v3')} className='item1'><AiOutlineShoppingCart />
+              </button>
+            </div>
           </Navbar.Collapse>
         </Container>
-        <div className='items2'>
-          <Nav.Link as={Link} to={'ProfileP'} className='item1'><FaUserCircle /></Nav.Link>
-          <button onClick={() => openModal('https://www.toasttab.com/homekitchen/v3')} className='item1'><AiOutlineShoppingCart />
-          </button>
-        </div>
+        
       </Navbar>
       <div className="col-lg-12">
         <div className='' style={{ width: '80%', margin: 'auto' }}>

@@ -10,7 +10,7 @@ const About = () => {
       <div className="album  py-5 bg-light mt-5" >
         <div className="container">
           <div className="row">
-            <div className="col-md-4">
+            <div className="col-md-4 col-sm-6" >
               <div className="card mb-4 box-shadow">
                 <img
                   className="card-img-top"
@@ -44,7 +44,7 @@ const About = () => {
                 </div>
               </div>
             </div>
-            <div className="col-md-4">
+            <div className="col-md-4 col-sm-6">
               <div className="card mb-4 box-shadow">
                 <img
                   className="card-img-top"
@@ -74,7 +74,7 @@ const About = () => {
                 />
                 <div className="card-body">
                   <p className="card-text">
-                    Salad is best food for who finding healthy food in diat 
+                    Salad is the best food for who finding healthy and fresh food for everyday diat plan 
                   </p>
                   
                 </div>
