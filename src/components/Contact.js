@@ -1,3 +1,5 @@
+// Form validation by useState/ store value in local storage/ 
+
 
 import { useState } from 'react';
 
@@ -45,7 +47,7 @@ function Contact() {
     }
  
     // Perform form submission  
-    console.log({
+    const formData = {
       name,
       email,
       phone,
@@ -53,8 +55,14 @@ function Contact() {
       eventDate,
       eventTime,
       eventDescription,
-    });
- 
+    };
+  
+    // Convert the form data to a JSON string
+    const formDataJson = JSON.stringify(formData);
+
+    // Store the form data in local storage
+    localStorage.setItem('formData', formDataJson);
+
     // Reset form fields
     setName('');
     setEmail('');
@@ -68,26 +76,24 @@ function Contact() {
 
 
   return (
+
     <div >
       <h1 className='mt-5' style={{ textAlign: 'center' }}>CATERING ORDER</h1>
       <div className="container py-5">
-
         <div className="border rounded  p-4">
           <form onSubmit={handleSubmit}>
             <div className='row' >
               <div className="col form_margin my-3 form-group" >
                 <label className='mb-1' htmlFor="name">Name *</label>
-                <input type="text" className="py-2  form-control" id="name" placeholder="Name*" 
-                value={name}
-                onChange={(e) => setName(e.target.value)}  />
-                  
-                
+                <input type="text" className="py-2  form-control" id="name" placeholder="Name*"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)} />
               </div>
               <div className="col my-3 form-group">
                 <label className='mb-1' htmlFor="email">Email *</label>
                 <input type="email" className="py-2 form-control" id="email" placeholder="Email*"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}  />
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)} />
               </div>
             </div>
 
@@ -95,38 +101,38 @@ function Contact() {
               <div className="col form_margin form-group">
                 <label className='mb-1' htmlFor="phone">Phone Number *</label>
                 <input type="tel" className="py-2 form-control" id="phone" placeholder="Phone Number*"
-                value={phone}
-                onChange={(e) => setPhone(e.target.value)}  />
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)} />
               </div>
               <div className="col  form-group">
                 <label className='mb-1' htmlFor="people">Number of People *</label>
                 <input type="number" className="py-2 form-control" id="people" placeholder="Number of People*"
-                value={people}
-                onChange={(e) => setPeople(e.target.value)}/>
+                  value={people}
+                  onChange={(e) => setPeople(e.target.value)} />
               </div>
             </div>
 
             <div className='row'>
               <div className="col my-3 form_margin form-group">
                 <label className='mb-1' htmlFor="event-date">Event Date *</label>
-                <input type="date" className="py-2 form-control" id="event-date" placeholder="dd-mm-yyyy" 
-                value={eventDate}
-                onChange={(e) => setEventDate(e.target.value)}/>
+                <input type="date" className="py-2 form-control" id="event-date" placeholder="dd-mm-yyyy"
+                  value={eventDate}
+                  onChange={(e) => setEventDate(e.target.value)} />
               </div>
               <div className="col my-3 form-group">
                 <label className='mb-1' htmlFor="event-time">Event Time *</label>
-                <input type="time" className="py-2 form-control" id="event-time" placeholder="--:-- --" 
-                 value={eventTime}
-                 onChange={(e) => setEventTime(e.target.value)}/>
+                <input type="time" className="py-2 form-control" id="event-time" placeholder="--:-- --"
+                  value={eventTime}
+                  onChange={(e) => setEventTime(e.target.value)} />
               </div>
             </div>
 
             <div className="my-3 form-group">
               <label className='mb-1' htmlFor="event-description">Describe the Event *</label>
               <textarea className="py-4 form-control" id="event-description" rows="3" placeholder="Describe the event"
-              value={eventDescription}
-              onChange={(e) => setEventDescription(e.target.value)}
-               ></textarea>
+                value={eventDescription}
+                onChange={(e) => setEventDescription(e.target.value)}
+              ></textarea>
             </div>
 
             <div className='container' >
@@ -153,7 +159,6 @@ function Contact() {
             <p className='pt-2 border-top' style={{ textAlign: 'end' }}>You will be contacted within 24 hours.</p>
 
             <button type="submit" className="btn submit-btn">Submit</button>
-
           </form>
         </div>
       </div>
@@ -162,6 +167,9 @@ function Contact() {
 }
 
 export default Contact;
+
+
+
 
 
 

@@ -1,12 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import data from '../../src/data.json'
 
-import saladG1 from '../Images/saladG1.jpg'
-import saladG2 from '../Images/saladG2.jpg'
-import saladG3 from '../Images/saladG3.jpg'
-import saladGr1 from '../Images/saladGr1.jpg'
-import saladGr2 from '../Images/saladGr2.jpg'
-import saladGr3 from '../Images/saladGr3.jpg'
 
 const Salad = () => {
   return (
@@ -19,42 +14,100 @@ const Salad = () => {
               <h1> SALAD </h1>
             </div>
           </div>
-          <div className="col-lg-4 col-md-6 col-sm-6">
+
+          {data.salad.map((item,index)=>(
+          <div className="col-lg-4 col-md-6 col-sm-6" key={index}>
             <div className="card mb-30">
-              <Link className="card-img-tiles" to="https://www.toasttab.com/homekitchen/v3#d79517f6e-e11b-42fd-94bd-3f9be16c9254d3a6d4a63-4eeb-4cd0-ab9c-849f9ad3ee71" data-abc="true">
+              <Link className="card-img-tiles" to={item.link} data-abc="true">
                 <div className="inner">
                   <div className="main-img">
-                    <img src={saladG1} alt="Category" />
+                    <img src={item.mainImage} alt="Category" />
                   </div>
                   <div className="thumblist">
-                    <img src={saladG2} alt="Category" />
-                    <img src={saladG3} alt="Category" />
+                      {item.thumbImages.map((thumbImage, thumbIndex) => (
+                        <img key={thumbIndex} src={thumbImage} alt="Category" />
+                      ))}
+                   
                   </div>
                 </div>
               </Link>
               <div className="card-body text-center">
-                <h4 className="card-title">Garden Green</h4>
-                <p className="text-muted">Starting from $7.25</p>
+                <h4 className="card-title">{item.title}</h4>
+                <p className="text-muted">Starting from {item.price}</p>
                 <div className='addtocart-btn'>
                   <Link
                     className="btn btn-outline-primary btn-sm"
-                    to="https://www.toasttab.com/homekitchen/v3#d79517f6e-e11b-42fd-94bd-3f9be16c9254d3a6d4a63-4eeb-4cd0-ab9c-849f9ad3ee71"
+                    to={item.addToCartLink}
                     data-abc="true"
-                  >
+                    >
                     Add to Cart
                   </Link>
                   <Link
                     className="btn btn-outline-primary btn-sm"
-                    to="https://www.toasttab.com/homekitchen/v3#d79517f6e-e11b-42fd-94bd-3f9be16c9254d3a6d4a63-4eeb-4cd0-ab9c-849f9ad3ee71"
+                    to={item.viewProductLink}
                     data-abc="true"
-                  >
+                    >
                     Viwe Product
                   </Link>
                 </div>
               </div>
             </div>
           </div>
-          <div className="col-lg-4 col-md-6 col-sm-6">
+          ))}
+
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default Salad
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import saladG1 from '../Images/saladG1.jpg'
+// import saladG2 from '../Images/saladG2.jpg'
+// import saladG3 from '../Images/saladG3.jpg'
+// import saladGr1 from '../Images/saladGr1.jpg'
+// import saladGr2 from '../Images/saladGr2.jpg'
+// import saladGr3 from '../Images/saladGr3.jpg'
+
+          {/* <div className="col-lg-4 col-md-6 col-sm-6">
             <div className="card mb-30">
               <div className='addtocart-btn'>
                 <Link className="card-img-tiles" to="https://www.toasttab.com/homekitchen/v3#d79517f6e-e11b-42fd-94bd-3f9be16c9254d3a6d4a63-4eeb-4cd0-ab9c-849f9ad3ee71" data-abc="true">
@@ -90,14 +143,4 @@ const Salad = () => {
                 </div>
               </div>
             </div>
-          </div>
-
-
-        </div>
-      </div>
-
-    </div>
-  )
-}
-
-export default Salad
+          </div> */}

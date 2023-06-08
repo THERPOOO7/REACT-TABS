@@ -424,7 +424,7 @@ a {
 /*---------------------- mediaquary for tab scroll in sm device -------------------------*/
 
 
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .tabs ul{
     display: flex;
     width: 100%;
