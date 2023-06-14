@@ -1,9 +1,20 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import data from '../../src/data.json'
 
 
 const KidManu = () => {
+
+  // const [isLoading, setIsLoading] = useState(true); // Add isLoading state
+
+
+  // useEffect(() => {
+  //   // Simulate an asynchronous operation
+  //   setTimeout(() => {
+  //     setIsLoading(false); // Set isLoading to false after the delay (e.g., when the data is loaded)
+  //   }, 1000); // Change the delay time as needed
+  // }, []);
+
   return (
     <div>
 

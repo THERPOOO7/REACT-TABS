@@ -1,7 +1,7 @@
 // Form validation by useState/ store value in local storage/ 
 
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function Contact() {
 
@@ -12,66 +12,84 @@ function Contact() {
   const [eventDate, setEventDate] = useState('');
   const [eventTime, setEventTime] = useState('');
   const [eventDescription, setEventDescription] = useState('');
- 
+  const [isEditing, setIsEditing] = useState(false);
+
   const handleSubmit = (e) => {
     e.preventDefault();
- 
+
     // Perform form validation
-    if (name.trim() === "") {
-     alert("Name is required");
-      return;
-    }
-    if (email.trim() === "") {
-      alert("Email is required");
-      return;
-    }
-    if (phone.trim() === "") {
-      alert("Phone number is required");
-      return;
-    }
-    if (people.trim() === "") {
-      alert("Number of people is required");
-      return;
-    }
-    if (eventDate.trim() === "") {
-      alert("Event date is required");
-      return;
-    }
-    if (eventTime.trim() === "") {
-      alert("Event time is required");
-      return;
-    }
-    if (eventDescription.trim() === "") {
-      alert("Event description is required");
-      return;
-    }
- 
-    // Perform form submission  
-    const formData = {
-      name,
-      email,
-      phone,
-      people,
-      eventDate,
-      eventTime,
-      eventDescription,
-    };
-  
-    // Convert the form data to a JSON string
-    const formDataJson = JSON.stringify(formData);
+    // if (name.trim() === "") {
+    //  alert("Name is required");
+    //   return;
+    // }
+    // if (email.trim() === "") {
+    //   alert("Email is required");
+    //   return;
+    // }
+    // if (phone.trim() === "") {
+    //   alert("Phone number is required");
+    //   return;
+    // }
+    // if (people.trim() === "") {
+    //   alert("Number of people is required");
+    //   return;
+    // }
+    // if (eventDate.trim() === "") {
+    //   alert("Event date is required");
+    //   return;
+    // }
+    // if (eventTime.trim() === "") {
+    //   alert("Event time is required");
+    //   return;
+    // }
+    // if (eventDescription.trim() === "") {
+    //   alert("Event description is required");
+    //   return;
+    // }
 
-    // Store the form data in local storage
-    localStorage.setItem('formData', formDataJson);
+    if (isEditing) {
+      // Retrieve the stored form data from session storage
+      const formDataJson = sessionStorage.getItem('formData');
+      if (formDataJson) {
+        const storedData = JSON.parse(formDataJson);
+        // Update the form fields with the stored data
+        setName(storedData?.name);
+        setEmail(storedData?.email);
+        setPhone(storedData?.phone);
+        setPeople(storedData?.people);
+        setEventDate(storedData?.eventDate);
+        setEventTime(storedData?.eventTime);
+        setEventDescription(storedData?.eventDescription);
+      }
+      setIsEditing(false);
+    } else {
 
-    // Reset form fields
-    setName('');
-    setEmail('');
-    setPhone('');
-    setPeople('');
-    setEventDate('');
-    setEventTime('');
-    setEventDescription('');
-    
+      // Perform form submission  
+      const formData = {
+        name,
+        email,
+        phone,
+        people,
+        eventDate,
+        eventTime,
+        eventDescription,
+      };
+
+      // Convert the form data to a JSON string
+      const formDataJson = JSON.stringify(formData);
+
+      // Store the form data in local storage
+      sessionStorage.setItem('formData', formDataJson);
+
+      // Reset form fields
+      setName('');
+      setEmail('');
+      setPhone('');
+      setPeople('');
+      setEventDate('');
+      setEventTime('');
+      setEventDescription('');
+    }
   };
 
 
@@ -155,11 +173,31 @@ function Contact() {
               </div>
               <p className="text-danger">** MAY INCLUDE ADDITIONAL CHARGES **</p>
             </div>
+            {
+              !isEditing?
+            
+            <div>
+              <button type="submit" className="btn btn-primary mt-3">
+                Submit
+              </button>
+            </div>
+            :
+            <div>
+              <button
+                type="button"
+                className="btn btn-primary mt-3"
+                style={{ borderRadius: '50px' }}
+                onClick={() => setIsEditing(false)}
+              >
+                Edit
+              </button>
+            </div>
+}
 
-            <p className='pt-2 border-top' style={{ textAlign: 'end' }}>You will be contacted within 24 hours.</p>
-
-            <button type="submit" className="btn submit-btn">Submit</button>
           </form>
+          <div>
+
+          </div>
         </div>
       </div>
     </div>

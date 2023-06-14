@@ -8,6 +8,7 @@ import {FaUserCircle} from 'react-icons/fa'
 import {AiOutlineShoppingCart} from 'react-icons/ai'
 import Model1 from './Model1';
 import abc from '../'
+import Empcreate from '../components/Empcreate'
 
 const NavBar = () => 
 
@@ -42,7 +43,7 @@ const closeModal = () => {
           <Navbar.Collapse id="basic-navbar-nav" style={{ justifyContent: 'end' }}>
             <Nav className="items" style={{ display: 'contents' }}>
               <Nav.Link as={Link} to={'/'} className='item' style={{ color: 'black' }}>HOME</Nav.Link>
-              <Nav.Link as={Link} to={'Contact'} className='item'>CATERING ORDER</Nav.Link>
+              <Nav.Link as={Link} to={'/data/create'} className='item'>CATERING ORDER</Nav.Link>
               <Nav.Link as={Link} to={'About'} className='item'>ORDER ONLINE</Nav.Link>
             </Nav>
           </Navbar.Collapse>

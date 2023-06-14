@@ -1,0 +1,24 @@
+{
+  "usrs": [
+    {
+      "name": "rp",
+      "email": "rudra.patel@metizsof.com",
+      "phone": "000000000",
+      "people": "88",
+      "eventDate": "2023-06-12",
+      "eventTime": "12:54",
+      "eventDescription": "abc",
+      "id": 1
+    },
+    {
+      "id": 3,
+      "name": "dzfv",
+      "email": "rudra.patel@metizsoft.com",
+      "phone": "1234567890",
+      "people": "55",
+      "eventDate": "2023-06-16",
+      "eventTime": "17:00",
+      "eventDescription": "yyyyyy"
+    }
+  ]
+}

@@ -382,13 +382,36 @@ a {
 }
 
 
+.card{
+  width: 100%;
+}
+
+.card-title{
+  text-align: center;
+}
+
+.card-body table{
+  text-align: center;
+}
 
 
+.back_btn:hover a{
+ color: #eee !important;
+}
 
 
+.divbtn a{
+  width: 10%;
+}
 
+.contact_formbtn{
+  display: flex;
+  width: 25%;
+}
 
-
+.contact_formbtn button{
+  margin-right: 10px;
+}
 
 
 

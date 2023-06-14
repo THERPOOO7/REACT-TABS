@@ -1,12 +1,22 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import data from '../../src/data.json'
-import  { useState } from 'react';
+import  { useState, useEffect } from 'react';
 import Model1 from '../components/Model1';
+import { HashLoader } from 'react-spinners';
+
 
 const Sandwich = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [websiteUrl, setWebsiteUrl] = useState('');
+  const [loading, setLoading] = useState(false)
+
+  useEffect(() => {
+    setLoading(true)
+    setTimeout(() => {
+      setLoading(false)      
+    }, 1000);
+  }, [])
 
   const openModal = (url) => {
     setIsModalOpen(true);
@@ -20,7 +30,7 @@ const Sandwich = () => {
 
 
   return (
-
+      <>
     <div className="container mt-50">
       <div className='row'>
         <div className='col-12'>
@@ -40,12 +50,21 @@ const Sandwich = () => {
             <h1> SANDWICH</h1>
           </div>
         </div>
-
+              
         {data.sandwich.map((item, index) => (
           <div className="col-lg-4 col-md-6 col-sm-6" key={index}>
             <div className="card mb-30">
               <Link className="card-img-tiles" to={item.link} data-abc="true">
                 <div className="inner">
+                  {
+                    loading ? 
+                    <HashLoader color="#F6881F" style={{position : 'absolute' , 
+                      top : '30%' ,
+                      left : '50% ',
+                      transform : 'translate (-50% , -50%)',
+                      }}/>
+                    : 
+                    <>
                   <div className="main-img">
                     <img src={item.mainImage} alt="Category" />
                   </div>
@@ -53,8 +72,9 @@ const Sandwich = () => {
                     {item.thumbImages.map((thumbImage, thumbIndex) => (
                       <img key={thumbIndex} src={thumbImage} alt="Category" />
                     ))}
-
                   </div>
+                  </>
+                  }
                 </div>
               </Link>
               <div className="card-body text-center">
@@ -83,6 +103,7 @@ const Sandwich = () => {
 
       </div>
     </div>
+    </>
   )
 }
 

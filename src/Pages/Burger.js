@@ -1,13 +1,15 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import data from '../../src/data.json'
-import  { useState } from 'react';
+import  { useState, useEffect } from 'react';
 import Model1 from '../components/Model1';
 
 const Burger = () => {
 
- const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [websiteUrl, setWebsiteUrl] = useState('');
+  const [isLoading, setIsLoading] = useState(true); // Add isLoading state
+
 
   const openModal = (url) => {
     setIsModalOpen(true);
@@ -18,6 +20,13 @@ const Burger = () => {
     setIsModalOpen(false);
     setWebsiteUrl('');
   };
+
+  useEffect(() => {
+    // Simulate an asynchronous operation
+    setTimeout(() => {
+      setIsLoading(false); // Set isLoading to false after the delay (e.g., when the data is loaded)
+    }, 1000); // Change the delay time as needed
+  }, []);
 
   return (
     
